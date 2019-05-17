@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "chitra-test": {
+    "test-ui": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/chitra-test",
+            "outputPath": "dist/test-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "chitra-test:build"
+            "browserTarget": "test-ui:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "chitra-test:build:production"
+              "browserTarget": "test-ui:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "chitra-test:build"
+            "browserTarget": "test-ui:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "chitra-test-e2e": {
+    "test-ui-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "chitra-test:serve"
+            "devServerTarget": "test-ui:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "chitra-test:serve:production"
+              "devServerTarget": "test-ui:serve:production"
             }
           }
         },
@@ -136,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "chitra-test"
+  "defaultProject": "test-ui"
 }
